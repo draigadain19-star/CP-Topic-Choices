@@ -1,0 +1,276 @@
+body {
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.container.wide {
+  max-width: 1100px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.subtext,
+.lead,
+.alt-text,
+.question-text,
+.mini-question,
+.prompt,
+.question-main {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.eyebrow,
+.mini-type,
+.question-label,
+.choice-letter {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.progress-wrap {
+  margin-top: 18px;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.rating-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rating-btn,
+.primary-btn,
+.ghost-btn,
+.choice-btn {
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.rating-btn {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 18px;
+  min-height: 70px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rating-btn:hover,
+.choice-btn:hover,
+.ghost-btn:hover {
+  background: #f1f5f9;
+}
+
+.rating-labels {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.choice-stack {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.choice-btn {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 22px;
+  padding: 18px;
+  text-align: left;
+}
+
+.choice-text {
+  display: block;
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.question-main {
+  font-size: 1.45rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.prompt {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.lead {
+  margin-top: 14px;
+  font-size: 1.05rem;
+}
+
+.question-box {
+  margin-top: 18px;
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+}
+
+.alt-text {
+  margin-top: 18px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.primary-btn {
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background: var(--accent-2);
+}
+
+.ghost-btn {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--text);
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.mini-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.mini-type {
+  margin-top: 8px;
+}
+
+.mini-question {
+  margin-top: 14px;
+}
+
+.debug-box {
+  margin-top: 14px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 16px;
+  border-radius: 18px;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 14px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .rating-grid {
+    gap: 8px;
+  }
+
+  .rating-labels {
+    font-size: 0.65rem;
+    gap: 8px;
+  }
+
+  .choice-text {
+    font-size: 1.05rem;
+  }
+}
